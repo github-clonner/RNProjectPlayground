@@ -7,7 +7,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native'
-import { enhanceFetch } from './FetchDecorator'
+import { enhanceFetch } from './HOCUtils'
 
 const { width: screenW } = Dimensions.get('window')
 
@@ -103,12 +103,12 @@ const CustomerLoading = () => {
 }
 
 // 进行修饰
-const FinalList = enhanceFetch(TargetList, CustomerLoading)
+const FinalList = enhanceFetch(TargetList, { loading: CustomerLoading })
 
 export default () => {
-  const requestQueue = [
+  const requestQueues = [
     {url: 'http://food.boohee.com/fb/v1/keywords', options: {}},
     {url: 'http://food.boohee.com/fb/v1/categories/list', options: {}}
   ]
-  return <FinalList requestQueue={requestQueue} />
+  return <FinalList requestQueues={requestQueues} />
 }
