@@ -11,6 +11,7 @@
   - [类WhatsApp转场动画](#类whatsapp转场动画)
   - [带索引SectionList](#带索引sectionlist)
   - [粘性TabBar](#粘性tabbar)
+  - [轮播图动画指示器](#轮播图动画指示器)
 - [组件](#组件)
   - [PullRefreshListView](#pullrefreshlistview)
 - [HOC应用（网络占位图处理）](#关于hoc应用)
@@ -242,6 +243,12 @@ iOS 在模拟器上的效果如上所示，JavaScript 线程掉帧还是挺严�
 ![demo](https://github.com/ljunb/screenshots/blob/master/sticky.gif)
 
 不过比较意外的是，iPhone 上运行时，滑动过程中设置了粘性的子组件老是会跳动，Android 反而表现良好……当前 [Demo](https://github.com/ljunb/RNProjectPlayground/blob/master/src/pages/demos/stickytabbar/index.js) 没有集成下拉刷新，可能仍需基于某些第三方来做定制。
+
+[↑ 返回顶部](#目录)
+
+### 轮播图动画指示器
+暂时做了流动样式，后面考虑再做个 `scale` 渐变样式：
+![demo](https://github.com/ljunb/screenshots/blob/master/indicator.mov)
 
 [↑ 返回顶部](#目录)
 
